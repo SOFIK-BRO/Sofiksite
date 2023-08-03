@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Class Page</title>
+    
+   <style type="text/css">
+   
+   body {
+   background-color:#d1ffd1;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   }
+   
+   header {
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   padding: 10px 0;
+   }
+   
+   main {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   }
+   #chat {
+   width: 80%;
+   margin: 20px;
+   border: 1px solid #ccc;
+   padding: 10px;
+   }
+   
+   #chat-messages {
+   height: 150px;
+   overflow-y: auto;
+   border: 1px solid #ccc;
+   margin-bottom: 10px;
+   padding: 5px;
+   }
+   
+   #chat-input {
+   width: 85%;
+   padding: 5px;
+   }
+   
+   #send-button {
+   width: 30%;
+   padding: 5px;
+   }
+   
+   header, nav, main, footer {
+   padding: 20px;
+   }
+   header {
+   background-color: #088;
+   color: #fff;
+   text-align: center;
+   }
+   
+   
+   nav {
+   background-color: #5797;
+   display: none;
+   position:fixed;
+   }
+   
+   
+   a {
+   text-decoration: none ;
+   color: none;
+   padding: 8px;
+   }
+   
+   a:hover {
+   background-color: #555;
+   }
+   
+   #menu-toggle {
+   display: none;
+   }
+   
+   label {
+   font-size: 24px;
+   cursor: pointer;
+   display: block;
+   padding: 10px;
+   
+   }
+   
+   #menu-toggle:checked ~ nav {
+   display: block;
+   }
+   
+   nav a {
+   color: #fff;
+   text-decoration: none;
+   padding: 8px 16px;
+   }
+   nav a:hover {
+   background-color: #444;
+   }
+   
+   footer {
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   }
+   
+   </style>
+</head>
+<body>
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle">&#9776;</label>
+
+    <nav>
+    <ul>
+ <li>   <a href="index.html">Home</a></li><br>
+ <li>   <a href="about me.html">About</a></li><br>
+    <li><a href="contact.html">Contact</a></li><br>
+ <li>   <a href="admission form.html">Admission Form</a></li><br>
+   
+   <li> <a href="play list.html" > Play List </a> </li><br>
+    </ul>
+    </nav>
+    
+    
+    <header>
+        <h1>Live Class Page</h1>
+    </header>
+
+
+   
+    <main>
+        
+        <div id="video-player">
+            
+           <video id="videoPlayer" width="400" height="200" pcontrols>
+           <source src="" type="video/mp4">
+           
+           </video>
+           
+        </div>
+
+
+   
+        <div id="chat">
+            <div id="chat-messages">
+                
+            </div>
+            <input type="text" id="chat-input" placeholder="Type your message">
+            <button id="send-button">Send</button>
+        </div>
+    </main>
+
+    
+    
+
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const sendButton = document.getElementById('send-button');
+    
+
+    function appendMessage(message) {
+    const chatMessageElement = document.createElement('div');
+    chatMessageElement.textContent = message;
+    chatMessages.appendChild(chatMessageElement);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+
+    sendButton.addEventListener('click', () => {
+    const message = chatInput.value.trim();
+    if (message !== '') {
+    appendMessage(`You: ${message}`);
+    chatInput.value = '';
+    });
+    });
+      
+    </script><br><br><br>
+    
+    <footer>
+    <p>copyright &copy; 2023 sofikbro</p>
+    </footer>
+    
+</body>
+</html>

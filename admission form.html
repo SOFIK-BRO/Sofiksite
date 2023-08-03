@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admission Registration Form</title>
+    
+    <style type="text/css">
+    
+    body {
+    background-color:#d1ffd1;p
+    font-family: Arial, sans-serif;
+    }header, footer {
+    padding: 20px;
+    }
+    header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    }
+   nav {
+   background-color: #5797;
+   display: none;
+   position:fixed;
+   }
+   
+   
+   a {
+   text-decoration: none ;
+   color: red;
+   padding: 8px;
+   }
+   
+   a:hover {
+   background-color: #555;
+   }
+   
+   #menu-toggle {
+   display: none;
+   }
+   
+   label {
+   font-size: 24px;
+   
+   
+   }
+   
+   #menu-toggle:checked ~ nav {
+   display: block;
+   }
+   
+    
+    nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    }
+   
+    
+ form{
+    background-color:#FFFFFF;
+    } 
+    
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    }
+    
+    </style>
+    
+    
+</head>
+
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle">&#9776;</label>
+
+
+<nav>
+<ul>
+
+
+<li> <a href="index.html" >Home</a></li><br>
+<li><a href="about me.html">About me</a></li><br>
+<li><a href="contact.html">Contact</a></li><br>
+ <li>  <a href="live class.html" >Live Clss</a></li> <br>
+  <li> <a href="play list.html" > Play List </a> </li><br>
+   </ul>
+   
+  </nav>    
+        
+        
+        
+<br><br><br><br><br><br>
+     
+     <u>
+     <h1>Admission Registration Form</h1>
+     </u>
+     <form action="submit_registration.php" method="POST">
+     <fieldset>
+     <legend>Personal Information:</legend>
+
+     <label for="full_name">Full Name:</label>
+     <input type="text" id="full_name" name="full_name" required><br>
+     
+     <label for="full_name">Father Name:</label>
+     <input type="text" id="full_name" name="full_name" required><br>
+     
+     <label for="date_of_birth">Date of Birth:</label>
+     <input type="date" id="date_of_birth" name="date_of_birth" required><br>
+     
+     <label>Gender:</label>
+     <input type="radio" id="male" name="gender" value="Male" required>
+     <label for="male">Male</label>
+     <input type="radio" id="female" name="gender" value="Female" required>
+     <label for="female">Female</label><br>
+     
+     <label for="nationality">Nationality:</label>
+     <input type="text" id="nationality" name="nationality" required><br>
+     
+     <label for="contact_number">Contact Number:</label>
+     <input type="tel" id="contact_number" name="contact_number" required><br>
+     
+     <label for="email_address">Email Address:</label>
+     <input type="email" id="email_address" name="email_address" required><br>
+     
+     <label for="permanent_address">Permanent Address:</label>
+     <textarea id="permanent_address" name="permanent_address" rows="3" required></textarea><br>
+     
+     <label for="city">City:</label>
+     <input type="text" id="city" name="city" required><br>
+     
+     <label for="state_province">State/Province:</label>
+     <input type="text" id="state_province" name="state_province" required><br>
+     
+     <label for="postal_code">Postal/ZIP Code:</label>
+     <input type="text" id="postal_code" name="postal_code" required><br>
+     
+     <label for="country">Country:</label>
+     <input type="text" id="country" name="country" required><br>
+     </fieldset>
+    
+     <fieldset>
+     <legend>Academic Details:</legend>
+     <label for="current_school">Current School/College/Institution:</label>
+     <input type="text" id="current_school" name="current_school" required><br>
+     
+     <label for="grade_level">Grade/Year/Level:</label>
+     <input type="text" id="grade_level" name="grade_level" required><br>
+     
+     <label for="previous_education">Previous Educational Background (if applicable):</label>
+     <textarea id="previous_education" name="previous_education" rows="3"></textarea><br>
+     </fieldset>
+     
+     <fieldset>
+     <legend>Academy Program:</legend>
+     <label for="program_of_study">Intended Program of Study:</label>
+     <input type="text" id="program_of_study" name="program_of_study" required><br>
+     
+     <label for="start_date">Preferred Start Date:</label>
+     <input type="date" id="start_date" name="start_date" required><br>
+     </fieldset>
+     
+     <fieldset>
+     <legend>Additional Information:</legend>
+     <label for="hear_about_us">How did you hear about our academy?</label>
+     <input type="text" id="hear_about_us" name="hear_about_us" required><br>
+     
+     <label>Have you attended any of our academy's events or workshops before?</label>
+     <input type="radio" id="yes" name="attended_events" value="Yes" required>
+     <label for="yes">Yes</label>
+     <input type="radio" id="no" name="attended_events" value="No" required>
+     <label for="no">No</label><br>
+     
+     <label for="reason_to_join">Why are you interested in joining our academy? (Brief statement)</label>
+     <textarea id="reason_to_join" name="reason_to_join" rows="4" required></textarea><br>
+     </fieldset>
+    
+     <input type="submit" value="Submit">
+     </form>
+    <br><br><br>
+    <footer>
+    <p>copyright &copy; 2023 sofikbro</p>
+    </footer>
+    
+</body>
+
+</html>
